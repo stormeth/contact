@@ -11,12 +11,13 @@ contract('Sc1', function(accounts) {
             return meta.age.call();
         }).then(function(age) {
             myage = age.toNumber();
-            console.log('age', myage);
+            // console.log('age', myage);
+            assert.equal(myage, 51, "age should be 51");
 
             return meta.firstname.call();
         }).then(function(fn) {
-            console.log('name', fn);
-
+            // console.log('name', fn);
+            assert.equal(fn, "bill", "first name should be bill");
         });
     });
 });
