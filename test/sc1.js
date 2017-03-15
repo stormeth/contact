@@ -12,6 +12,11 @@ contract('Sc1', function(accounts) {
         }).then(function(age) {
             myage = age.toNumber();
             console.log('age', myage);
+
+            return meta.firstname.call();
+        }).then(function(fn) {
+            console.log('name', fn);
+
         });
     });
 });
